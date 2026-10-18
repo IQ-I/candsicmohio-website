@@ -166,6 +166,58 @@
       .wrap{width:min(var(--max),calc(100% - 32px))}.contact-bar .wrap{min-height:82px;flex-wrap:wrap;gap:0;padding-block:8px}.contact-items{gap:12px}.contact-items a:not(:first-child),.contact-location{display:none}.header-hours{width:100%;font-size:.68rem;line-height:1.45;text-align:left;border-top:1px solid #24241f;padding-top:6px;margin-top:5px;white-space:normal}.header-hours span{overflow-wrap:anywhere}.nav-inner{height:64px}.nav-links.open{top:64px;height:calc(100vh - 110px)}.hero{padding:48px 0 38px}.hero-grid{gap:22px}.hero-art{min-height:385px}.sun{width:330px;height:330px}.arches{inset:38px 4px 8px 0}.hero-emblem{width:250px;height:250px}.hero-label{bottom:20px}.hero-note{align-items:flex-start;gap:16px;flex-direction:column}.quick-grid{grid-template-columns:1fr}.quick-item,.quick-item:first-child,.quick-item:last-child{grid-column:auto;border-right:0;border-top:1px solid var(--line);padding:18px 0}.quick-item:first-child{border-top:0}section{padding:72px 0}.section-head{gap:20px;margin-bottom:34px}.topic-grid,.social-grid,.service-grid,.visit-grid,.department-grid,.app-grid,.counters{grid-template-columns:1fr}.service-card,.service-card:last-child{grid-column:auto;min-height:220px}.department-card{min-height:205px}.app-card.featured{grid-column:auto}.app-card.featured .app-visual{height:200px}.counter{border-right:0;border-bottom:1px solid #393a34}.counter:last-child{border-bottom:0}.mission-feature{min-height:350px;padding:28px}.topic{min-height:150px}.live-card{padding:26px;min-height:380px}.sermon-feature{min-height:230px;padding:24px;gap:15px}.album-art{padding:26px}.now-playing{padding:24px}.track{grid-template-columns:34px 1fr;padding:17px 20px}.track-time{grid-column:2}.event-card{grid-template-columns:1fr}.event-date{display:flex;gap:10px;align-items:baseline;justify-content:center}.event-date b{font-size:3.2rem}.event-copy{padding:28px 22px}.visit-card{padding:27px}.contact-panel{grid-template-columns:1fr;padding:34px 26px}.contact-actions{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr;gap:32px}.footer-grid>div:first-child{grid-column:auto}.footer-bottom{flex-direction:column}h1{font-size:clamp(3.25rem,16vw,5.4rem)}
     }
 
+    .live-stage{background:#171813;border:1px solid #3b3d35;padding:26px;margin-bottom:26px}
+    .stage-head{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+    .stage-kicker{font-size:.7rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--gold-bright)}
+    .stage-state{font-size:.82rem;color:#c9cabf}
+    .stage-frame{display:grid}
+    .stage-panel{grid-area:1/1;visibility:hidden;opacity:0;transition:opacity .35s ease;pointer-events:none}
+    .stage-panel.on{visibility:visible;opacity:1;pointer-events:auto}
+    .stage-checking{min-height:340px;display:grid;place-items:center;align-content:center;gap:16px;text-align:center;color:#c9cabf}
+    .check-spinner{width:44px;height:44px;border-radius:50%;border:3px solid rgba(242,191,85,.22);border-top-color:var(--gold-bright);animation:spin 0.9s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .live-topbar{display:flex;align-items:center;gap:13px;flex-wrap:wrap;margin-bottom:16px}
+    .live-badge{display:inline-flex;align-items:center;gap:8px;background:#d92315;color:#fff;padding:6px 12px;font-size:.74rem;font-weight:700;letter-spacing:.11em}
+    .live-badge-dot{width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 0 0 rgba(255,255,255,.7);animation:pulse 1.6s infinite}
+    .live-topbar strong{font-family:var(--serif);font-size:1.3rem;color:var(--on-night)}
+    .live-title{color:#aeb0a8;font-size:.84rem}
+    .yt-mount{aspect-ratio:16/9;background:#000;position:relative}
+    .yt-mount iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .stage-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:18px}
+    .stage-note{color:#989a91;font-size:.78rem}
+    .btn-gold{background:var(--gold);border-color:var(--gold);color:#171712}
+    .btn-gold:hover{background:var(--gold-bright);border-color:var(--gold-bright);color:#171712}
+    .offline-card{position:relative;overflow:hidden;background:radial-gradient(560px 300px at 50% -60px,rgba(255,236,190,.95),transparent 70%),linear-gradient(165deg,#fdf8ea 0%,#f8ecc9 52%,#f1d9a0 100%);color:#2a2114;padding:46px 30px 34px;text-align:center;border:1px solid rgba(200,147,46,.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,.5),0 24px 60px rgba(0,0,0,.28)}
+    .offline-inner{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center}
+    .offline-emblem{position:relative;width:92px;height:92px;color:#a5761a;display:grid;place-items:center;margin-bottom:6px}
+    .offline-emblem svg{width:84px;height:84px;position:relative;z-index:2}
+    .offline-emblem:before,.offline-emblem:after{content:"";position:absolute;inset:0;border-radius:50%;border:1px solid rgba(165,118,26,.55);animation:ring-pulse 3.2s ease-out infinite}
+    .offline-emblem:after{animation-delay:1.6s}
+    @keyframes ring-pulse{0%{transform:scale(.72);opacity:.85}100%{transform:scale(1.45);opacity:0}}
+    .offline-anim{position:relative;width:118px;height:118px;margin:2px auto 4px}
+    .offline-anim lottie-player{position:absolute;inset:0;width:100%;height:100%}
+    .orb{position:absolute;border-radius:50%;background:radial-gradient(circle at 34% 32%,#ffe9ad,#d9a83f 70%);opacity:.75;animation:orb-float 5.5s ease-in-out infinite}
+    .orb-a{width:34px;height:34px;left:42px;top:44px}
+    .orb-b{width:17px;height:17px;left:16px;top:66px;animation-delay:1.4s}
+    .orb-c{width:13px;height:13px;right:16px;top:56px;animation-delay:2.6s}
+    @keyframes orb-float{0%,100%{transform:translateY(9px)}50%{transform:translateY(-13px)}}
+    .particle{position:absolute;bottom:-12px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#fff3cf,#dfae45 72%);opacity:0;animation:particle-rise 8s linear infinite;z-index:1}
+    @keyframes particle-rise{0%{transform:translateY(0);opacity:0}14%{opacity:.65}82%{opacity:.5}100%{transform:translateY(-430px);opacity:0}}
+    .offline-card h3{font-family:var(--serif);font-size:clamp(1.85rem,4.2vw,3.1rem);line-height:1.04;letter-spacing:-.02em;margin:10px 0 12px;max-width:640px}
+    .offline-card h3 em{font-style:italic;color:#96690f}
+    .offline-sub{color:#5d4a26;font-size:1rem;margin:0 0 8px;max-width:560px}
+    .offline-actions{justify-content:center;margin-top:20px}
+    .offline-actions .btn{padding:13px 18px}
+    .offline-card .btn.alt{border-color:#2a2114;color:#2a2114}
+    .offline-card .btn.alt:hover{background:#2a2114;color:#fdf8ea}
+    .offline-alt-sermon{margin:18px 0 0;font-size:.85rem;color:#5d4a26}
+    .offline-alt-sermon a{font-weight:700;text-decoration:underline;text-underline-offset:3px;color:#7c5510}
+    .check-row{display:flex;gap:8px 18px;flex-wrap:wrap;justify-content:center;align-items:center;margin-top:24px;padding-top:18px;border-top:1px solid rgba(122,85,16,.28);font-size:.75rem;color:#77613a;width:100%}
+    .check-again{background:none;border:0;border-bottom:1px solid currentColor;color:#7c5510;font-weight:700;cursor:pointer;padding:2px 1px;font-size:.78rem}
+    .check-again:hover{color:#2a2114}
+    .opens-live-note{display:block;color:#989a91;font-size:.7rem;margin-top:8px}
+    @media (max-width:640px){.live-stage{padding:18px}.stage-checking{min-height:280px}.offline-card{padding:34px 18px 26px}.offline-actions .btn{width:100%}.live-topbar strong{font-size:1.12rem}}
+    @media (prefers-reduced-motion:reduce){.check-spinner,.orb,.particle,.live-badge-dot,.offline-emblem:before,.offline-emblem:after{animation:none}.particle{display:none}}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     .live-ribbon{position:sticky;top:0;z-index:70;background:linear-gradient(90deg,#5b1914,#d94f35 46%,#7c271d);color:#fff;box-shadow:0 8px 28px rgba(154,46,30,.28);animation:ribbon-in .45s ease both}.ribbon-inner{min-height:52px;display:flex;align-items:center;gap:12px}.pulse-dot{width:10px;height:10px;border-radius:50%;background:#fff;box-shadow:0 0 0 0 rgba(255,255,255,.65);animation:pulse 1.7s infinite;flex:0 0 auto}.ribbon-inner strong{letter-spacing:.1em;font-size:.72rem}.ribbon-inner span:nth-of-type(2){font-size:.84rem}.ribbon-link{margin-left:auto;border-bottom:1px solid rgba(255,255,255,.7);font-weight:700;font-size:.79rem;white-space:nowrap}.ribbon-inner button{border:0;background:rgba(0,0,0,.18);color:#fff;width:30px;height:30px;cursor:pointer}.live-ribbon.is-live{background:linear-gradient(90deg,#9b1111,#ff3b30 48%,#9b1111);box-shadow:0 8px 32px rgba(255,42,32,.4)}.live-ribbon.is-hidden{display:none}.live-ribbon.is-hidden~.contact-bar+.site-nav{top:0}@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(255,255,255,0)}}@keyframes ribbon-in{from{transform:translateY(-100%)}to{transform:none}}
     .route-tools{position:relative;display:flex;justify-content:flex-end;padding-top:14px}.site-search{width:min(420px,100%);display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding:8px 2px;color:var(--ink-soft)}.site-search input{border:0;background:transparent;color:var(--ink);outline:0;min-width:0;width:100%}.search-results{position:absolute;right:0;top:60px;width:min(480px,100%);z-index:42;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);padding:8px}.search-result{display:block;padding:12px;border-bottom:1px solid var(--line)}.search-result:last-child{border:0}.search-result strong{display:block}.search-result small{color:var(--ink-soft)}
@@ -349,13 +401,60 @@
     <section class="media-section route-page" id="watch" data-page="watch">
       <div class="wrap">
         <div class="section-head"><div><p class="eyebrow">Live Hub &amp; watch</p><h2>Church beyond<br/>the building.</h2></div><p>Live status updates from the church team. When the team marks a platform live, the ribbon changes immediately in this tab. Platform links always open the official live destination.</p></div>
+        <div class="live-stage" id="liveStage">
+          <div class="stage-head"><span class="stage-kicker">Now Live · YouTube</span><span class="stage-state" id="stageState" role="status" aria-live="polite">Not live right now</span></div>
+          <div class="stage-frame">
+            <div class="stage-panel offline-card on" id="stageOffline">
+              <span class="particle" style="left:9%;width:7px;height:7px;animation-delay:0s" aria-hidden="true"></span>
+              <span class="particle" style="left:22%;width:5px;height:5px;animation-delay:2.4s" aria-hidden="true"></span>
+              <span class="particle" style="left:47%;width:8px;height:8px;animation-delay:4.6s" aria-hidden="true"></span>
+              <span class="particle" style="left:68%;width:5px;height:5px;animation-delay:1.5s" aria-hidden="true"></span>
+              <span class="particle" style="left:84%;width:7px;height:7px;animation-delay:3.7s" aria-hidden="true"></span>
+              <span class="particle" style="left:93%;width:4px;height:4px;animation-delay:5.8s" aria-hidden="true"></span>
+              <div class="offline-inner">
+                <div class="offline-emblem" aria-hidden="true">
+                  <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="#10110f" stroke="currentColor" stroke-width="3"/><circle cx="50" cy="50" r="40" fill="none" stroke="currentColor"/><path d="M50 10v27M40 20h20" stroke="currentColor" stroke-width="5"/><path d="M17 54c2 16 9 27 20 34M19 61l-6-2m10 10-7 1m12 8-6 4m61-28c-2 16-9 27-20 34m18-27 6-2M77 69l7 1m-12 8 6 4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><text x="50" y="53" fill="currentColor" font-family="Georgia,serif" font-weight="700" font-size="15" text-anchor="middle">ICM</text><path d="M35 59c6-2 11-1 15 4 4-5 9-6 15-4v16c-6-1-11 1-15 6-4-5-9-7-15-6zM50 63v18M35 66l-10 6m40-6 10 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+                </div>
+                <div class="offline-anim" aria-hidden="true">
+                  <span class="orb orb-a"></span><span class="orb orb-b"></span><span class="orb orb-c"></span>
+                  <lottie-player id="graceLottie" src="data:application/json;base64,eyJhc3NldHMiOltdLCJkZGQiOjAsImZyIjozMCwiaCI6MjQwLCJpcCI6MCwibGF5ZXJzIjpbeyJhbyI6MCwiZGRkIjowLCJpbmQiOjEsImlwIjowLCJrcyI6eyJhIjp7ImEiOjAsImsiOlswLDAsMF19LCJvIjp7ImEiOjEsImsiOlt7ImkiOnsieCI6WzAuNjY3XSwieSI6WzFdfSwibyI6eyJ4IjpbMC4zMzNdLCJ5IjpbMF19LCJzIjpbMF0sInQiOjB9LHsiaSI6eyJ4IjpbMC42NjddLCJ5IjpbMV19LCJvIjp7IngiOlswLjMzM10sInkiOlswXX0sInMiOls4MF0sInQiOjE4fSx7ImkiOnsieCI6WzAuNjY3XSwieSI6WzFdfSwibyI6eyJ4IjpbMC4zMzNdLCJ5IjpbMF19LCJzIjpbODBdLCJ0Ijo2OH0seyJzIjpbMF0sInQiOjkwfV19LCJwIjp7ImEiOjEsImsiOlt7ImkiOnsieCI6WzAuNjY3XSwieSI6WzFdfSwibyI6eyJ4IjpbMC4zMzNdLCJ5IjpbMF19LCJzIjpbMTIwLDE3OCwwXSwidCI6MH0seyJzIjpbMTIwLDY2LDBdLCJ0Ijo5MH1dfSwiciI6eyJhIjowLCJrIjowfSwicyI6eyJhIjoxLCJrIjpbeyJpIjp7IngiOlswLjY2NywwLjY2NywwLjY2N10sInkiOlsxLDEsMV19LCJvIjp7IngiOlswLjMzMywwLjMzMywwLjMzM10sInkiOlswLDAsMF19LCJzIjpbODgsODgsMTAwXSwidCI6MH0seyJzIjpbMTEyLDExMiwxMDBdLCJ0Ijo5MH1dfX0sIm5tIjoiY2VudGVyIG9yYiIsIm9wIjo5MCwic2hhcGVzIjpbeyJpdCI6W3sicCI6eyJhIjowLCJrIjpbMCwwXX0sInMiOnsiYSI6MCwiayI6Wzg0LDg0XX0sInR5IjoiZWwifSx7ImMiOnsiYSI6MCwiayI6WzAuNzksMC41OCwwLjE4LDFdfSwibyI6eyJhIjowLCJrIjoxMDB9LCJ0eSI6ImZsIn0seyJhIjp7ImEiOjAsImsiOlswLDBdfSwibyI6eyJhIjowLCJrIjoxMDB9LCJwIjp7ImEiOjAsImsiOlswLDBdfSwiciI6eyJhIjowLCJrIjowfSwicyI6eyJhIjowLCJrIjpbMTAwLDEwMF19LCJ0eSI6InRyIn1dLCJ0eSI6ImdyIn1dLCJzciI6MSwic3QiOjAsInR5Ijo0fSx7ImFvIjowLCJkZGQiOjAsImluZCI6MiwiaXAiOjAsImtzIjp7ImEiOnsiYSI6MCwiayI6WzAsMCwwXX0sIm8iOnsiYSI6MSwiayI6W3siaSI6eyJ4IjpbMC42NjddLCJ5IjpbMV19LCJvIjp7IngiOlswLjMzM10sInkiOlswXX0sInMiOlswXSwidCI6OH0seyJpIjp7IngiOlswLjY2N10sInkiOlsxXX0sIm8iOnsieCI6WzAuMzMzXSwieSI6WzBdfSwicyI6WzY1XSwidCI6MjZ9LHsiaSI6eyJ4IjpbMC42NjddLCJ5IjpbMV19LCJvIjp7IngiOlswLjMzM10sInkiOlswXX0sInMiOls2NV0sInQiOjc0fSx7InMiOlswXSwidCI6OTB9XX0sInAiOnsiYSI6MSwiayI6W3siaSI6eyJ4IjpbMC42NjddLCJ5IjpbMV19LCJvIjp7IngiOlswLjMzM10sInkiOlswXX0sInMiOls2NCwxOTYsMF0sInQiOjh9LHsicyI6WzY0LDkyLDBdLCJ0Ijo5MH1dfSwiciI6eyJhIjowLCJrIjowfSwicyI6eyJhIjowLCJrIjpbMTAwLDEwMCwxMDBdfX0sIm5tIjoibGVmdCBvcmIiLCJvcCI6OTAsInNoYXBlcyI6W3siaXQiOlt7InAiOnsiYSI6MCwiayI6WzAsMF19LCJzIjp7ImEiOjAsImsiOlszMCwzMF19LCJ0eSI6ImVsIn0seyJjIjp7ImEiOjAsImsiOlswLjkxLDAuNzIsMC4zMywxXX0sIm8iOnsiYSI6MCwiayI6MTAwfSwidHkiOiJmbCJ9LHsiYSI6eyJhIjowLCJrIjpbMCwwXX0sIm8iOnsiYSI6MCwiayI6MTAwfSwicCI6eyJhIjowLCJrIjpbMCwwXX0sInIiOnsiYSI6MCwiayI6MH0sInMiOnsiYSI6MCwiayI6WzEwMCwxMDBdfSwidHkiOiJ0ciJ9XSwidHkiOiJnciJ9XSwic3IiOjEsInN0IjowLCJ0eSI6NH0seyJhbyI6MCwiZGRkIjowLCJpbmQiOjMsImlwIjowLCJrcyI6eyJhIjp7ImEiOjAsImsiOlswLDAsMF19LCJvIjp7ImEiOjEsImsiOlt7ImkiOnsieCI6WzAuNjY3XSwieSI6WzFdfSwibyI6eyJ4IjpbMC4zMzNdLCJ5IjpbMF19LCJzIjpbMF0sInQiOjE2fSx7ImkiOnsieCI6WzAuNjY3XSwieSI6WzFdfSwibyI6eyJ4IjpbMC4zMzNdLCJ5IjpbMF19LCJzIjpbNjBdLCJ0IjozNH0seyJpIjp7IngiOlswLjY2N10sInkiOlsxXX0sIm8iOnsieCI6WzAuMzMzXSwieSI6WzBdfSwicyI6WzYwXSwidCI6ODB9LHsicyI6WzBdLCJ0Ijo5MH1dfSwicCI6eyJhIjoxLCJrIjpbeyJpIjp7IngiOlswLjY2N10sInkiOlsxXX0sIm8iOnsieCI6WzAuMzMzXSwieSI6WzBdfSwicyI6WzE3OCwxOTAsMF0sInQiOjE2fSx7InMiOlsxNzgsODQsMF0sInQiOjkwfV19LCJyIjp7ImEiOjAsImsiOjB9LCJzIjp7ImEiOjAsImsiOlsxMDAsMTAwLDEwMF19fSwibm0iOiJyaWdodCBvcmIiLCJvcCI6OTAsInNoYXBlcyI6W3siaXQiOlt7InAiOnsiYSI6MCwiayI6WzAsMF19LCJzIjp7ImEiOjAsImsiOlsyMiwyMl19LCJ0eSI6ImVsIn0seyJjIjp7ImEiOjAsImsiOlswLjg1LDAuNjMsMC4yMiwxXX0sIm8iOnsiYSI6MCwiayI6MTAwfSwidHkiOiJmbCJ9LHsiYSI6eyJhIjowLCJrIjpbMCwwXX0sIm8iOnsiYSI6MCwiayI6MTAwfSwicCI6eyJhIjowLCJrIjpbMCwwXX0sInIiOnsiYSI6MCwiayI6MH0sInMiOnsiYSI6MCwiayI6WzEwMCwxMDBdfSwidHkiOiJ0ciJ9XSwidHkiOiJnciJ9XSwic3IiOjEsInN0IjowLCJ0eSI6NH0seyJhbyI6MCwiZGRkIjowLCJpbmQiOjQsImlwIjowLCJrcyI6eyJhIjp7ImEiOjAsImsiOlswLDAsMF19LCJvIjp7ImEiOjEsImsiOlt7ImkiOnsieCI6WzAuNjY3XSwieSI6WzFdfSwibyI6eyJ4IjpbMC4zMzNdLCJ5IjpbMF19LCJzIjpbNDJdLCJ0IjowfSx7InMiOlswXSwidCI6OTB9XX0sInAiOnsiYSI6MCwiayI6WzEyMCwxMjgsMF19LCJyIjp7ImEiOjAsImsiOjB9LCJzIjp7ImEiOjEsImsiOlt7ImkiOnsieCI6WzAuNjY3LDAuNjY3LDAuNjY3XSwieSI6WzEsMSwxXX0sIm8iOnsieCI6WzAuMzMzLDAuMzMzLDAuMzMzXSwieSI6WzAsMCwwXX0sInMiOls3Miw3MiwxMDBdLCJ0IjowfSx7InMiOlsxMTgsMTE4LDEwMF0sInQiOjkwfV19fSwibm0iOiJzb2Z0IHJpbmciLCJvcCI6OTAsInNoYXBlcyI6W3siaXQiOlt7InAiOnsiYSI6MCwiayI6WzAsMF19LCJzIjp7ImEiOjAsImsiOlsxNTAsMTUwXX0sInR5IjoiZWwifSx7ImMiOnsiYSI6MCwiayI6WzAuNzksMC41OCwwLjE4LDFdfSwibyI6eyJhIjowLCJrIjoxMDB9LCJ0eSI6InN0IiwidyI6eyJhIjowLCJrIjozfX0seyJhIjp7ImEiOjAsImsiOlswLDBdfSwibyI6eyJhIjowLCJrIjoxMDB9LCJwIjp7ImEiOjAsImsiOlswLDBdfSwiciI6eyJhIjowLCJrIjowfSwicyI6eyJhIjowLCJrIjpbMTAwLDEwMF19LCJ0eSI6InRyIn1dLCJ0eSI6ImdyIn1dLCJzciI6MSwic3QiOjAsInR5Ijo0fV0sIm1hcmtlcnMiOltdLCJubSI6IkdyYWNlIEZsb2F0Iiwib3AiOjkwLCJ2IjoiNS43LjQiLCJ3IjoyNDB9" background="transparent" speed="1" loop autoplay></lottie-player>
+                </div>
+                <h3>We’re not live at the moment — <em>but grace is still flowing.</em></h3>
+                <p class="offline-sub">Join us Sunday · Youth Bible Study starts 10:00 AM · Sunday Service starts 11:00 AM</p>
+                <div class="stage-actions offline-actions">
+                  <a class="btn btn-gold" href="https://www.youtube.com/@icmohio/live" target="_blank" rel="noopener">Watch Live on YouTube ↗</a>
+                  <button class="btn" id="offlineNotifyBtn" type="button">Notify Me</button>
+                  <a class="btn alt" href="https://www.youtube.com/watch?v=njdJCROBPrg" target="_blank" rel="noopener">Watch Latest Sermon ↗</a>
+                  <a class="btn alt" href="#/revival">View Revival</a>
+                  <button class="btn alt" id="offlineShareBtn" type="button">Share</button>
+                </div>
+                <p class="offline-alt-sermon">More worship: <a href="https://www.youtube.com/watch?v=NXMm_exZVoQ" target="_blank" rel="noopener">Sunday Service Live · ICM Worship Team — Praise &amp; Worship ↗</a></p>
+                <div class="check-row"><button class="check-again" id="offlineRecheckBtn" type="button">Check again</button><span id="lastChecked">Live status not checked yet</span><span>Live detection via YouTube player</span></div>
+              </div>
+            </div>
+            <div class="stage-panel stage-checking" id="stageChecking" aria-hidden="true">
+              <div class="check-spinner" aria-hidden="true"></div>
+              <p>Checking YouTube for a live service…</p>
+            </div>
+            <div class="stage-panel" id="stageLive" aria-hidden="true">
+              <div class="live-topbar"><span class="live-badge"><span class="live-badge-dot"></span>LIVE</span><strong>You’re watching live</strong><span class="live-title" id="liveTitle"></span></div>
+              <div class="yt-mount" id="ytPlayerMount"></div>
+              <div class="stage-actions">
+                <a class="btn btn-gold" href="https://www.youtube.com/@icmohio/live" target="_blank" rel="noopener">Open in YouTube ↗</a>
+                <button class="btn alt light-alt" id="liveShareBtn" type="button">Share</button>
+                <button class="btn alt light-alt" id="liveRecheckBtn" type="button">Check again</button>
+                <span class="stage-note">Plays muted — tap the video for sound.</span>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="live-console">
           <div class="live-state"><span class="pulse-dot" aria-hidden="true"></span><div><small>TEAM-UPDATED STATUS</small><strong id="liveStatusText">Not live right now — follow + turn on Notify Me.</strong></div></div>
           <div class="platform-live-grid">
-            <article class="platform-live"><div><span class="platform-mark">f</span><strong>Facebook</strong><small>@icmohio</small></div><a href="https://facebook.com/icmohio" target="_blank" rel="noopener">Watch Live ↗</a></article>
+            <article class="platform-live"><div><span class="platform-mark">f</span><strong>Facebook</strong><small>@icmohio</small></div><a href="https://facebook.com/icmohio" target="_blank" rel="noopener">Watch Live ↗</a><small class="opens-live-note">Opens live page</small></article>
             <article class="platform-live"><div><span class="platform-mark">▶</span><strong>YouTube</strong><small>@icmohio</small></div><a href="https://youtube.com/@icmohio/live" target="_blank" rel="noopener">Watch Live ↗</a></article>
-            <article class="platform-live"><div><span class="platform-mark">◎</span><strong>Instagram</strong><small>@cands.icm.church</small></div><a href="https://instagram.com/cands.icm.church" target="_blank" rel="noopener">Watch Live ↗</a></article>
-            <article class="platform-live"><div><span class="platform-mark">♪</span><strong>TikTok</strong><small>@icmmu</small></div><a href="https://tiktok.com/@icmmu/live" target="_blank" rel="noopener">Watch Live ↗</a></article>
+            <article class="platform-live"><div><span class="platform-mark">◎</span><strong>Instagram</strong><small>@cands.icm.church</small></div><a href="https://instagram.com/cands.icm.church" target="_blank" rel="noopener">Watch Live ↗</a><small class="opens-live-note">Opens live page</small></article>
+            <article class="platform-live"><div><span class="platform-mark">♪</span><strong>TikTok</strong><small>@icmmu</small></div><a href="https://tiktok.com/@icmmu/live" target="_blank" rel="noopener">Watch Live ↗</a><small class="opens-live-note">Opens live page</small></article>
           </div>
           <div class="notify-panel">
             <div><span class="dash-label">Notify Me</span><h3>Be ready when worship begins.</h3><p>Browser permission is remembered by your browser. Email sign-up opens your email app so the church can add you to its list.</p></div>
@@ -474,6 +573,57 @@
       var reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches, reveals=document.querySelectorAll('.reveal');
       var animateCounter=function(node){if(node.dataset.animated)return;node.dataset.animated='true';var target=Number(node.dataset.count)||0;if(reduceMotion){node.textContent=String(target);return;}var start=performance.now(),duration=900;function tick(now){var progress=Math.min((now-start)/duration,1);node.textContent=String(Math.round(target*(1-Math.pow(1-progress,3))));if(progress<1)requestAnimationFrame(tick);}requestAnimationFrame(tick);};
       if('IntersectionObserver' in window&&!reduceMotion){var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');entry.target.querySelectorAll('[data-count]').forEach(animateCounter);}});},{threshold:.12});reveals.forEach(function(item){observer.observe(item);});}else reveals.forEach(function(item){item.classList.add('is-visible');item.querySelectorAll('[data-count]').forEach(animateCounter);});
+    })();
+  </script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js" defer></script>
+  <script>
+    (function(){
+      var YT_CHANNEL_ID=''; /* @icmohio channel ID could not be verified from the channel page at build time, so the widget runs in handle mode: the player source is https://www.youtube.com/@icmohio/live. If a verified channel ID is added here later, the same code switches to full IFrame-API live_stream detection automatically. */
+      var LIVE_URL='https://www.youtube.com/@icmohio/live';
+      var stage=document.getElementById('liveStage');if(!stage)return;
+      var panels={offline:document.getElementById('stageOffline'),checking:document.getElementById('stageChecking'),live:document.getElementById('stageLive')};
+      var stageState=document.getElementById('stageState'),lastChecked=document.getElementById('lastChecked'),toast=document.getElementById('toast');
+      var state='offline',player=null,timer=null,pollTimer=null,decideTimer=null,apiPromise=null,started=false;
+      function showToast(text){if(!toast)return;toast.textContent=text;toast.classList.add('show');setTimeout(function(){toast.classList.remove('show');},2200);}
+      function setPanel(name){state=name;Object.keys(panels).forEach(function(k){var el=panels[k],on=k===name;el.classList.toggle('on',on);el.setAttribute('aria-hidden',String(!on));if('inert' in el)el.inert=!on;});stageState.textContent=name==='live'?'Live now on YouTube':name==='checking'?'Checking YouTube…':'Not live right now';}
+      function stamp(){var d=new Date();lastChecked.textContent='Last checked '+d.toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});}
+      function teardown(){if(pollTimer){clearInterval(pollTimer);pollTimer=null;}if(decideTimer){clearTimeout(decideTimer);decideTimer=null;}if(player){try{player.destroy();}catch(e){}player=null;}var m=document.getElementById('ytPlayerMount');if(m)m.innerHTML='';}
+      function goOffline(){teardown();setPanel('offline');stamp();}
+      function goLive(){if(pollTimer){clearInterval(pollTimer);pollTimer=null;}if(decideTimer){clearTimeout(decideTimer);decideTimer=null;}try{var d=player&&player.getVideoData?player.getVideoData():null;if(d&&d.title)document.getElementById('liveTitle').textContent=d.title;}catch(e){}setPanel('live');stamp();showToast('C&S ICM is live on YouTube');}
+      function evaluate(){if(!player||!player.getPlayerState)return;var s=player.getPlayerState();if(s===1||s===3)goLive();}
+      function loadApi(){if(window.YT&&YT.Player)return Promise.resolve();if(apiPromise)return apiPromise;apiPromise=new Promise(function(resolve,reject){var prev=window.onYouTubeIframeAPIReady;window.onYouTubeIframeAPIReady=function(){if(prev)prev();resolve();};var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';s.onerror=function(){apiPromise=null;reject(new Error('YouTube player failed to load'));};document.head.appendChild(s);setTimeout(function(){if(!(window.YT&&YT.Player)){apiPromise=null;reject(new Error('YouTube player timed out'));} },8000);});return apiPromise;}
+      function buildPlayer(){
+        var mount=document.getElementById('ytPlayerMount');mount.innerHTML='';
+        var ifr=document.createElement('iframe');
+        ifr.src='https://www.youtube.com/embed/live_stream?channel='+encodeURIComponent(YT_CHANNEL_ID)+'&enablejsapi=1&autoplay=1&mute=1&playsinline=1&rel=0';
+        ifr.title='C&S ICM live stream on YouTube';ifr.setAttribute('allow','autoplay; encrypted-media; picture-in-picture');ifr.setAttribute('allowfullscreen','');
+        mount.appendChild(ifr);
+        player=new YT.Player(ifr,{events:{
+          onReady:function(){evaluate();pollTimer=setInterval(evaluate,1500);decideTimer=setTimeout(function(){if(state==='checking')goOffline();},7000);},
+          onStateChange:function(e){if(e.data===1||e.data===3)goLive();else if(e.data===0&&state==='live')goOffline();},
+          onError:function(){goOffline();}
+        }});
+      }
+      function checkLive(){
+        if(state==='checking')return;
+        teardown();setPanel('checking');
+        if(!YT_CHANNEL_ID){setTimeout(function(){if(state==='checking'){setPanel('offline');stamp();}},650);return;}
+        loadApi().then(buildPlayer).catch(function(){goOffline();});
+      }
+      function onWatchPage(){return location.hash.indexOf('#/watch')===0;}
+      function startWatching(){if(started)return;started=true;checkLive();timer=setInterval(function(){if(!document.hidden&&state!=='live'&&state!=='checking')checkLive();},60000);}
+      function stopWatching(){if(!started)return;started=false;if(timer){clearInterval(timer);timer=null;}if(player){try{player.stopVideo();}catch(e){}}}
+      function routeCheck(){if(onWatchPage())startWatching();else stopWatching();}
+      window.addEventListener('hashchange',routeCheck);routeCheck();
+      document.getElementById('offlineRecheckBtn').addEventListener('click',checkLive);
+      document.getElementById('liveRecheckBtn').addEventListener('click',checkLive);
+      function shareLive(){var text='Join C&S ICM for live worship: '+LIVE_URL;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){showToast('Live details copied');}).catch(function(){showToast('Use the Watch Live on YouTube button to share');});}else showToast('Use the Watch Live on YouTube button to share');}
+      document.getElementById('offlineShareBtn').addEventListener('click',shareLive);
+      document.getElementById('liveShareBtn').addEventListener('click',shareLive);
+      document.getElementById('offlineNotifyBtn').addEventListener('click',function(){var t=document.getElementById('notifyToggle');if(!t)return;t.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});setTimeout(function(){t.focus();t.click();},420);});
+      var lp=document.getElementById('graceLottie');
+      if(lp)lp.addEventListener('error',function(){lp.style.display='none';});
+      setTimeout(function(){if(!(window.customElements&&customElements.get('lottie-player'))&&lp)lp.style.display='none';},3500);
     })();
   </script>
 </body>
